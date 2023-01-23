@@ -1,0 +1,17 @@
+@use "./common/forward_main" as *;
+
+@include colorVars($dark-colors);
+@include checkTheme;
+/*
+--theme
+--font
+--accent
+*/
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: getCSSVar(theme);
+  color: getCSSVar(font);
+  @include flexbox(column);
+}

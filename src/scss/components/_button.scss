@@ -1,0 +1,8 @@
+@use "../common/theme";
+@use "../common/variables" as var;
+
+.button {
+  width: min-content;
+  border-radius: 25px;
+  background-color: hsl(var.getCSSVar(theme), 100%, 100%);
+}

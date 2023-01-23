@@ -1,0 +1,24 @@
+$dark-colors: (
+  theme: #333333,
+  font: #e6e6e6,
+  accent: #8f8f24,
+);
+$light-colors: (
+  theme: lighten(map-get($dark-colors, theme), 100%),
+  font: darken(map-get($dark-colors, font), 100%),
+  accent: lighten(map-get($dark-colors, accent), 100%),
+);
+
+@mixin colorVars($theme-colors) {
+  :root {
+    @each $text, $value in $theme-colors {
+      --#{$text}: #{$value};
+    }
+  }
+}
+
+@mixin checkTheme {
+  @media (prefers-color-scheme: light) {
+    @include colorVars($light-colors);
+  }
+}

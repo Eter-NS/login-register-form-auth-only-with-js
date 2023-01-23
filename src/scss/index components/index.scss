@@ -1,0 +1,16 @@
+@use "../common/forward_main" as *;
+
+body {
+  font-size: 1.5rem;
+}
+
+main {
+  @include flexbox(column);
+  row-gap: 3vh;
+}
+
+h1 {
+  text-align: center;
+  padding: 0 5%;
+  font-family: $Merienda;
+}
