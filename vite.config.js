@@ -1,3 +1,4 @@
+import autoprefixer from "autoprefixer";
 import { defineConfig } from "vite";
 
 export default defineConfig({
@@ -5,5 +6,10 @@ export default defineConfig({
   build: {
     emptyOutDir: true,
     outDir: "../dist",
+  },
+  css: {
+    postcss: {
+      plugins: [autoprefixer],
+    },
   },
 });
