@@ -1,12 +1,18 @@
 $dark-colors: (
-  theme: #333333,
-  font: #e6e6e6,
-  accent: #8f8f24,
+  background: hsl(0, 0%, 15%),
+  window: hsl(0, 0%, 30%),
+  button: hsl(0, 0%, 90%),
+  button-font-color: hsl(0, 0%, 10%),
+  font: hsl(0, 0%, 90%),
+  accent: hsl(60, 60%, 35%),
 );
 $light-colors: (
-  theme: lighten(map-get($dark-colors, theme), 100%),
-  font: darken(map-get($dark-colors, font), 100%),
-  accent: lighten(map-get($dark-colors, accent), 100%),
+  background: lighten(map-get($dark-colors, background), 85%),
+  window: lighten(map-get($dark-colors, window), 55%),
+  button: darken(map-get($dark-colors, button), 75%),
+  button-font-color: lighten(map-get($dark-colors, button-font-color), 80%),
+  font: darken(map-get($dark-colors, font), 75%),
+  accent: lighten(map-get($dark-colors, accent), 50%),
 );
 
 @mixin colorVars($theme-colors) {
