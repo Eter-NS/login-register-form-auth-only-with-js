@@ -1,16 +1,28 @@
 @use "../common/forward_main" as *;
+@use "../components/button";
 
 body {
   font-size: 1.5rem;
 }
 
 main {
+  z-index: 0;
+  width: 80vmin;
+  height: 80vmin;
+  padding: 5%;
   @include flexbox(column);
-  row-gap: 3vh;
+  border-radius: 25px;
+  background-color: getCSSVar(window);
+  row-gap: 5vmin;
 }
 
 h1 {
   text-align: center;
   padding: 0 5%;
   font-family: $Merienda;
+
+  span {
+    font-family: inherit;
+    display: block;
+  }
 }
