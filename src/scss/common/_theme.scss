@@ -2,17 +2,20 @@ $dark-colors: (
   background: hsl(0, 0%, 15%),
   window: hsl(0, 0%, 30%),
   button: hsl(0, 0%, 90%),
+  button-hover: hsl(0, 0%, 75%),
   button-font-color: hsl(0, 0%, 10%),
   font: hsl(0, 0%, 90%),
-  accent: hsl(60, 60%, 35%),
+  accent: hsl(60, 55%, 35%),
 );
 $light-colors: (
   background: lighten(map-get($dark-colors, background), 85%),
   window: lighten(map-get($dark-colors, window), 55%),
   button: darken(map-get($dark-colors, button), 75%),
+  button-hover: darken(map-get($dark-colors, button-hover), 40%),
   button-font-color: lighten(map-get($dark-colors, button-font-color), 80%),
   font: darken(map-get($dark-colors, font), 75%),
-  accent: lighten(map-get($dark-colors, accent), 50%),
+  accent: lighten(map-get($dark-colors, accent), 25%),
+  // accent: map-get($dark-colors, accent),
 );
 
 @mixin colorVars($theme-colors) {
