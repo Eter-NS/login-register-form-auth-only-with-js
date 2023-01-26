@@ -10,6 +10,7 @@
   border-radius: 20px;
   background-color: var.getCSSVar(button);
   color: var.getCSSVar(button-font-color);
+  text-decoration: none;
   transition: background 250ms ease-in;
   cursor: pointer;
 
