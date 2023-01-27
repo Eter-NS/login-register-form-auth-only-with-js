@@ -4,10 +4,49 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Sign up</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/register.js"></script>
+    <main>
+      <h1>Sign</h1>
+      <form class="form">
+        <div class="form--input-container">
+          <label for="name" class="form__placeholder">Your name</label>
+          <input
+            type="text"
+            class="form--input"
+            name="name"
+            id="name"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="form--input-container">
+          <label for="email" class="form__placeholder">Your email</label>
+          <input
+            type="email"
+            class="form--input"
+            name="email"
+            id="email"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="form--input-container">
+          <label for="passw" class="form__placeholder">Your password</label>
+          <input
+            type="password"
+            class="form--input"
+            name="passw"
+            id="passw"
+            autocomplete="off"
+          />
+        </div>
+
+        <input type="submit" class="form__submit" value="Sign up" />
+      </form>
+    </main>
+
+    <script type="module" src="./js/register.js"></script>
   </body>
 </html>
