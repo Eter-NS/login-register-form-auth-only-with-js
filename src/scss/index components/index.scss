@@ -8,7 +8,7 @@ body {
 main {
   position: relative;
   z-index: 1;
-  width: max-content;
+  max-width: 80vmin;
   height: max-content;
   padding: 5%;
   @include flexbox(column);
@@ -30,7 +30,7 @@ main {
 
 h1 {
   text-align: center;
-  padding: 0 5%;
+  margin: 0 auto;
   font-family: $Merienda;
 
   span {
@@ -45,4 +45,11 @@ h1 {
   height: 100%;
   @include flexbox(row);
   justify-content: space-evenly;
+
+  @media (max-width: 425px) {
+    & {
+      flex-direction: column;
+      row-gap: 5vmin;
+    }
+  }
 }
