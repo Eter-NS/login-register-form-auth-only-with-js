@@ -20,5 +20,4 @@ $light-colors: (
   button-font-color: lighten(map-get($dark-colors, button-font-color), 80%),
   font: darken(map-get($dark-colors, font), 75%),
   accent: lighten(map-get($dark-colors, accent), 25%),
-  // accent: map-get($dark-colors, accent),
 );
