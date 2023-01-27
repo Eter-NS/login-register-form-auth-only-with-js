@@ -1,10 +1,11 @@
 @use "./fonts";
 @use "./variables" as var;
 
-* {
+*,
+:root {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-size: var.$font-size;
+  font-size: var.getCSSVar(font-size);
   font-family: fonts.$Roboto;
 }

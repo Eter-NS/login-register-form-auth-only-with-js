@@ -1,6 +1,8 @@
 $dark-colors: (
   background: hsl(0, 0%, 15%),
   window: hsl(0, 0%, 30%),
+  window-element: hsl(0, 0%, 40%),
+  window-element-hover: hsl(0, 0%, 45%),
   button: hsl(0, 0%, 90%),
   button-hover: hsl(0, 0%, 75%),
   button-font-color: hsl(0, 0%, 10%),
@@ -10,6 +12,9 @@ $dark-colors: (
 $light-colors: (
   background: lighten(map-get($dark-colors, background), 85%),
   window: lighten(map-get($dark-colors, window), 55%),
+  window-element: lighten(map-get($dark-colors, window-element), 55%),
+  window-element-hover:
+    lighten(map-get($dark-colors, window-element-hover), 55%),
   button: darken(map-get($dark-colors, button), 75%),
   button-hover: darken(map-get($dark-colors, button-hover), 40%),
   button-font-color: lighten(map-get($dark-colors, button-font-color), 80%),
@@ -17,17 +22,3 @@ $light-colors: (
   accent: lighten(map-get($dark-colors, accent), 25%),
   // accent: map-get($dark-colors, accent),
 );
-
-@mixin colorVars($theme-colors) {
-  :root {
-    @each $text, $value in $theme-colors {
-      --#{$text}: #{$value};
-    }
-  }
-}
-
-@mixin checkTheme {
-  @media (prefers-color-scheme: light) {
-    @include colorVars($light-colors);
-  }
-}
