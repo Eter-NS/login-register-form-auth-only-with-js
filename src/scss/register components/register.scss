@@ -12,4 +12,6 @@ main {
 h1 {
   font-family: fonts.$Merienda;
   text-align: center;
+  padding-bottom: 2vmin;
+  color: var.getCSSVar(font);
 }
