@@ -1,7 +1,7 @@
 @use "./common/forward_main" as *;
-
-@include colorVars($dark-colors);
-@include checkTheme;
+@use "./common/mediaQueries" as mq;
+@include mq.colorVars($dark-colors);
+@include mq.checkTheme;
 /*
 --theme
 --font
