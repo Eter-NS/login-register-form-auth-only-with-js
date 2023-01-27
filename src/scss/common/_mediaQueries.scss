@@ -1,0 +1,15 @@
+@use "./theme" as *;
+
+@mixin colorVars($theme-colors) {
+  :root {
+    @each $text, $value in $theme-colors {
+      --#{$text}: #{$value};
+    }
+  }
+}
+
+@mixin checkTheme {
+  @media (prefers-color-scheme: light) {
+    @include colorVars($light-colors);
+  }
+}
