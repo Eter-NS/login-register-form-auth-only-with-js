@@ -1,2 +1,2 @@
 import "../scss/main.scss";
-import "../scss/index components/index.scss";
+import "../scss/login components/login.scss";
