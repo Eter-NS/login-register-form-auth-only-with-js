@@ -1,11 +1,22 @@
-$Roboto: "Roboto", sans-serif;
-$Merienda: quote("Merienda"), cursive;
+@font-face {
+  font-family: "meriendaReg";
+  src: url("../../assets/fonts/merienda-variablefont_wght-webfont.woff2")
+      format("woff2"),
+    url("../../assets/fonts/merienda-variablefont_wght-webfont.woff")
+      format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
-  font-family: "Roboto", sans-serif;
-  src: "../../assets/fonts/Roboto/Roboto-Regular.ttf" format("ttf");
+  font-family: "robotoReg";
+  src: url("../../assets/fonts/roboto-regular-webfont.woff2") format("woff2"),
+    url("../../assets/fonts/roboto-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
-@font-face {
-  font-family: "Merienda", cursive;
-  src: "../../assets/fonts/Merienda/static/Merienda-SemiBold.ttf" format("ttf");
-}
+
+$regularFont: "robotoReg", sans-serif;
+$accentFont: quote("meriendaReg"), cursive, sans-serif;

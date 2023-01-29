@@ -31,10 +31,10 @@ main {
 h1 {
   text-align: center;
   margin: 0 auto;
-  font-family: $Merienda;
+  font-family: $accentFont;
 
   span {
-    font-family: inherit;
+    font-family: $accentFont;
     display: inline-block;
     line-height: $font-size;
   }
