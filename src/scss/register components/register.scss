@@ -1,16 +1,16 @@
-@use "../components/form.scss";
 @use "../common/variables" as var;
 @use "../common/fonts";
+@use "../components/form";
 
 main {
-  width: max-content;
+  width: 60vmin;
   height: max-content;
   @include var.rounded();
   background-color: var.getCSSVar(window);
 }
 
 h1 {
-  font-family: fonts.$Merienda;
+  font-family: fonts.$accentFont;
   text-align: center;
   padding-bottom: 2vmin;
   color: var.getCSSVar(font);

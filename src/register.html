@@ -10,39 +10,43 @@
       <h1>Sign up</h1>
       <form class="form">
         <div class="form--input-container">
+          <label for="name" class="form__placeholder">Your name</label>
           <input
             type="text"
             class="form--input"
             name="name"
             id="name"
             autocomplete="off"
-            placeholder="name"
+            placeholder="Your name"
+            required
+            minlength="2"
           />
-          <label for="name" class="form__placeholder">Your name</label>
         </div>
 
         <div class="form--input-container">
+          <label for="email" class="form__placeholder">Your email</label>
           <input
             type="email"
             class="form--input"
             name="email"
             id="email"
             autocomplete="off"
-            placeholder="email"
+            placeholder="Your email"
+            required
           />
-          <label for="email" class="form__placeholder">Your email</label>
         </div>
 
         <div class="form--input-container">
+          <label for="passw" class="form__placeholder">Your password</label>
           <input
             type="password"
             class="form--input"
             name="passw"
             id="passw"
             autocomplete="off"
-            placeholder="password"
+            placeholder="Your password"
+            required
           />
-          <label for="passw" class="form__placeholder">Your password</label>
         </div>
 
         <button type="submit" class="form__submit">Sign up</button>
