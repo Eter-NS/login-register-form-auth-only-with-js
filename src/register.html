@@ -8,7 +8,7 @@
   <body>
     <main>
       <h1>Sign up</h1>
-      <form class="form">
+      <form class="form" method="post">
         <div class="form--input-container">
           <label for="name" class="form__placeholder">Your name</label>
           <input
@@ -19,7 +19,7 @@
             autocomplete="off"
             placeholder="Your name"
             required
-            minlength="2"
+            minlength="3"
           />
         </div>
 
@@ -37,12 +37,12 @@
         </div>
 
         <div class="form--input-container">
-          <label for="passw" class="form__placeholder">Your password</label>
+          <label for="password" class="form__placeholder">Your password</label>
           <input
             type="password"
             class="form--input"
-            name="passw"
-            id="passw"
+            name="password"
+            id="password"
             autocomplete="off"
             placeholder="Your password"
             required
