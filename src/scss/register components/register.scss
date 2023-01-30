@@ -3,10 +3,16 @@
 @use "../components/form";
 
 main {
-  width: 60vmin;
+  width: 75vmin;
   height: max-content;
   @include var.rounded();
   background-color: var.getCSSVar(window);
+
+  @media (max-width: 425px) {
+    & {
+      width: 90vmin;
+    }
+  }
 }
 
 h1 {
