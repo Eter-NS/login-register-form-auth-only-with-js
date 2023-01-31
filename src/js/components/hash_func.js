@@ -1,6 +1,7 @@
 export default async function hashMessage(message) {
+  const msg = Array.from(message);
   // encode as (utf-8) Uint8Array
-  const msgUint8 = new TextEncoder().encode(message);
+  const msgUint8 = new TextEncoder().encode(msg.join(""));
   // hash the message
   const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8);
   // convert buffer to byte array
