@@ -164,30 +164,33 @@ export default class RegisterAuth {
     }, 1000);
   }
 
-  sendForm() {
+  async sendForm() {
     const existingAccounts =
       JSON.parse(sessionStorage.getItem("accounts")) || null;
 
     if (existingAccounts) {
       const emailInput = this._form.querySelector("[type=email]");
-      const hasExists = doesTheEmailExist(existingAccounts, emailInput);
-
+      const hasExists = await doesTheEmailExist(existingAccounts, emailInput);
+      console.log("hasExists", hasExists);
       if (hasExists) {
         // the email already exists inside the database, error handling
         this.toggleFieldErr(emailInput, true);
         this.toggleErrText(emailInput, true, this._errTextMessages.emailExists);
+        this.buttonShaking();
         return;
       } else {
         this.toggleFieldErr(emailInput, false);
         this.toggleErrText(emailInput, false);
         this.saveData(existingAccounts);
+        // this._form.submit();
+        // location.href = location.origin + "/login.html";
       }
     } else {
       const accountsObj = {};
       this.saveData(accountsObj);
+      // this._form.submit();
+      // location.href = location.origin + "/login.html";
     }
-    location.href = location.origin + "/login.html";
-    this._form.submit();
   }
 
   async saveData(databaseObject) {
