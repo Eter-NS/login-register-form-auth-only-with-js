@@ -182,14 +182,14 @@ export default class RegisterAuth {
         this.toggleFieldErr(emailInput, false);
         this.toggleErrText(emailInput, false);
         this.saveData(existingAccounts);
-        // this._form.submit();
-        // location.href = location.origin + "/login.html";
+        this._form.submit();
+        location.href = location.origin + "/login.html";
       }
     } else {
       const accountsObj = {};
       this.saveData(accountsObj);
-      // this._form.submit();
-      // location.href = location.origin + "/login.html";
+      this._form.submit();
+      location.href = location.origin + "/login.html";
     }
   }
 
