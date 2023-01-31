@@ -1,3 +1,4 @@
+import hashMessage from "./hash_func";
 export default function doesTheEmailExist(dataObject, emailInput) {
   let emailHash,
     exists = false;
