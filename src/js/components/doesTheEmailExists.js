@@ -1,16 +1,10 @@
 import hashMessage from "./hash_func";
-export default async function doesTheEmailExist(dataObject, emailInput) {
-  let emailHash,
-    exists = false;
-  emailHash = await hashMessage(emailInput.value);
-  console.log(dataObject);
-  for (const key in dataObject) {
-    console.log(key, "\n", emailHash);
-    console.log(key === emailHash);
-    if (key === emailHash) {
-      exists = true;
-    }
-  }
+export default async function doesTheEmailExist(API_STRING, emailInput) {
+  const emailHash = await hashMessage(emailInput.value),
+    status = await fetch(`${API_STRING}/${emailHash}`).then((data) => {
+      return data.statusText;
+    });
+  // returns OK when the email exists
 
-  return exists;
+  return status === "OK" ? true : false;
 }

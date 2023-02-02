@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "npm-run-all --parallel dev2 json-server",
+    "dev2": "vite --host",
+    "json-server": "json-server --watch data/database.json --host localhost --port 6561",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -12,5 +14,8 @@
     "autoprefixer": "^10.4.13",
     "sass": "^1.57.1",
     "vite": "^4.0.0"
+  },
+  "dependencies": {
+    "json-server": "^0.17.1"
   }
 }
