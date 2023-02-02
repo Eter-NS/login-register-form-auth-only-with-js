@@ -8,29 +8,31 @@
   <body>
     <main>
       <h1>Sign in</h1>
-      <form class="form">
+      <form class="form" method="post">
         <div class="form--input-container">
+          <label for="email" class="form__placeholder">Your email</label>
           <input
             type="email"
             class="form--input"
             name="email"
             id="email"
             autocomplete="off"
-            placeholder="email"
+            required
+            placeholder="Your email"
           />
-          <label for="email" class="form__placeholder">Your email</label>
         </div>
 
         <div class="form--input-container">
+          <label for="passw" class="form__placeholder">Your password</label>
           <input
             type="password"
             class="form--input"
             name="passw"
             id="passw"
             autocomplete="off"
-            placeholder="password"
+            required
+            placeholder="Your password"
           />
-          <label for="passw" class="form__placeholder">Your password</label>
         </div>
 
         <button type="submit" class="form__submit">Sign in</button>

@@ -1,0 +1,26 @@
+@use "../components/form.scss";
+@use "../common/variables" as var;
+@use "../common/fonts";
+
+main {
+  width: max-content;
+  height: max-content;
+  @include var.rounded();
+  background-color: var.getCSSVar(window);
+}
+
+h1 {
+  font-family: fonts.$accentFont;
+  text-align: center;
+  padding-bottom: 2vmin;
+  color: var.getCSSVar(font);
+}
+
+.no-database-error-text {
+  z-index: 100;
+  position: absolute;
+  top: 2vh;
+  width: 50vmin;
+  text-align: center;
+  background-color: var.getCSSVar(accent);
+}
